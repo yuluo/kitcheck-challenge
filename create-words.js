@@ -28,31 +28,31 @@ function createWords( dictionaryFile, num ) {
 }
 
 function findWords( numberArray, dictionary ) {
-    dictionary = dictionary.filter( word => {
+    let dict = [ ...dictionary ];
+    dict = dict.filter( word => {
         return word.length === numberArray.length;
     } );
     for ( let i = 0; i < numberArray.length; i++ ) {
         let result = [];
         map[ numberArray[ i ] ].split( '' ).forEach( letter => {
-            result = result.concat( dictionary.filter( word => {
+            result = result.concat( dict.filter( word => {
                 return word[ i ] === letter;
             } ) );
         } );
 
-        dictionary = result;
+        dict = result;
     }
 
-    return dictionary;
+    return dict;
 }
 
 function cleanNums( num ) {
     let result = num.split( '-' ).join( '' );
-    if (result.includes('1') || result.includes('0') || isNaN( result )) {
+    if ( result.includes( '1' ) || result.includes( '0' ) || isNaN( result ) ) {
         return '';
     } else {
         return result;
     }
 }
-
 
 createWords( process.argv[ 2 ], process.argv[ 3 ] );
