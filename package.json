@@ -4,7 +4,7 @@
   "description": "create word using numbers",
   "main": "create-word.js",
   "scripts": {
-    "beautify": "./node_modules/.bin/js-beautify *.js",
+    "beautify": "./node_modules/.bin/js-beautify *.js ./test/*.js",
     "test": "./node_modules/.bin/nyc  --reporter=text mocha ./test/*.js"
   },
   "repository": {
