@@ -4,4 +4,4 @@
 npm install
 
 # Run
- node create-words.js  ./sample_dictionary.txt 228
+ node app.js  ./sample_dictionary.txt 228

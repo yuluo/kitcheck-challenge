@@ -59,4 +59,8 @@ function cleanNums( num ) {
     }
 }
 
-createWords( process.argv[ 2 ], process.argv[ 3 ] );
+module.exports = {
+    cleanNums,
+    findWords,
+    createWords
+};
