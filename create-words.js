@@ -18,10 +18,14 @@ function createWords( dictionaryFile, num ) {
     } else {
         let dictionary = [];
         fs.readFile( dictionaryFile, 'utf8', function ( err, contents ) {
-            dictionary = contents.split( '\r\n' );
-            let numberArray = number.split( '' );
-            let results = findWords( numberArray, dictionary );
-            console.log( results );
+            if ( err ) {
+                console.error( err );
+            } else {
+                dictionary = contents.split( '\r\n' );
+                let numberArray = number.split( '' );
+                let results = findWords( numberArray, dictionary );
+                console.log( results );
+            }
         } );
     }
 
