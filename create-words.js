@@ -47,7 +47,7 @@ function findWords( numberArray, dictionary ) {
 
 function cleanNums( num ) {
     let result = num.split( '-' ).join( '' );
-    if (result.includes('1') || result.includes('0') || !isNaN( result )) {
+    if (result.includes('1') || result.includes('0') || isNaN( result )) {
         return '';
     } else {
         return result;
