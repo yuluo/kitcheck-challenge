@@ -19,5 +19,9 @@
   "homepage": "https://github.com/yuluo/kitcheck-challenge#readme",
   "dependencies": {
     "js-beautify": "^1.9.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
   }
 }
