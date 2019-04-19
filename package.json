@@ -4,8 +4,8 @@
   "description": "create word using numbers",
   "main": "create-word.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "beautify": "./node_modules/.bin/js-beautify *.js"
+    "beautify": "./node_modules/.bin/js-beautify *.js",
+    "test": "./node_modules/.bin/nyc  --reporter=text mocha ./test/*.js"
   },
   "repository": {
     "type": "git",
@@ -17,11 +17,11 @@
     "url": "https://github.com/yuluo/kitcheck-challenge/issues"
   },
   "homepage": "https://github.com/yuluo/kitcheck-challenge#readme",
-  "dependencies": {
-    "js-beautify": "^1.9.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.1.4"
+    "js-beautify": "^1.9.1",
+    "mocha": "^6.1.4",
+    "nyc": "^14.0.0"
   }
 }
